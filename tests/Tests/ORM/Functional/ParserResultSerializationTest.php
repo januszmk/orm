@@ -34,25 +34,6 @@ class ParserResultSerializationTest extends OrmFunctionalTestCase
 
     /** @param Closure(ParserResult): ParserResult $toSerializedAndBack */
     #[DataProvider('provideToSerializedAndBack')]
-    public function testSerializeParserResultForQueryWithSqlWalker(Closure $toSerializedAndBack): void
-    {
-        $query = $this->_em
-            ->createQuery('SELECT u FROM Doctrine\Tests\Models\Company\CompanyEmployee u WHERE u.name = :name');
-
-        // Use the (legacy) SqlWalker which directly puts an SqlExecutor instance into the parser result
-        $query->setHint(Query::HINT_CUSTOM_OUTPUT_WALKER, Query\SqlWalker::class);
-
-        $parserResult = self::parseQuery($query);
-        $unserialized = $toSerializedAndBack($parserResult);
-
-        $this->assertInstanceOf(ParserResult::class, $unserialized);
-        $this->assertInstanceOf(ResultSetMapping::class, $unserialized->getResultSetMapping());
-        $this->assertEquals(['name' => [0]], $unserialized->getParameterMappings());
-        $this->assertNotNull($unserialized->prepareSqlExecutor($query));
-    }
-
-    /** @param Closure(ParserResult): ParserResult $toSerializedAndBack */
-    #[DataProvider('provideToSerializedAndBack')]
     public function testSerializeParserResultForQueryWithSqlOutputWalker(Closure $toSerializedAndBack): void
     {
         $query = $this->_em

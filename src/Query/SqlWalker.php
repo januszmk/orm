@@ -230,22 +230,6 @@ class SqlWalker
         $this->queryComponents[$dqlAlias] = $queryComponent;
     }
 
-    /**
-     * Gets an executor that can be used to execute the result of this walker.
-     *
-     * @deprecated Output walkers should no longer create the executor directly, but instead provide
-     *             a SqlFinalizer by implementing the `OutputWalker` interface. Thus, this method is
-     *             no longer needed and will be removed in 4.0.
-     */
-    public function getExecutor(AST\SelectStatement|AST\UpdateStatement|AST\DeleteStatement $statement): Exec\AbstractSqlExecutor
-    {
-        return match (true) {
-            $statement instanceof AST\UpdateStatement => $this->createUpdateStatementExecutor($statement),
-            $statement instanceof AST\DeleteStatement => $this->createDeleteStatementExecutor($statement),
-            default => new Exec\SingleSelectExecutor($statement, $this),
-        };
-    }
-
     /** @psalm-internal Doctrine\ORM */
     protected function createUpdateStatementExecutor(AST\UpdateStatement $AST): Exec\AbstractSqlExecutor
     {
