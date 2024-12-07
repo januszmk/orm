@@ -758,7 +758,7 @@ SQL
         $this->_em->flush();
     }
 
-    /** @psalm-return list<array{bool}> */
+    /** @phpstan-return list<array{bool}> */
     public static function useOutputWalkers(): array
     {
         return [
@@ -767,7 +767,7 @@ SQL
         ];
     }
 
-    /** @psalm-return list<array{bool}> */
+    /** @phpstan-return list<array{bool}> */
     public static function fetchJoinCollection(): array
     {
         return [
@@ -776,7 +776,7 @@ SQL
         ];
     }
 
-    /** @psalm-return list<array{bool, bool}> */
+    /** @phpstan-return list<array{bool, bool}> */
     public static function useOutputWalkersAndFetchJoinCollection(): array
     {
         return [

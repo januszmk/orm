@@ -26,34 +26,34 @@ use Doctrine\Tests\OrmFunctionalTestCase;
 /** @group DDC-2183 */
 abstract class SecondLevelCacheFunctionalTestCase extends OrmFunctionalTestCase
 {
-    /** @psalm-var list<Person> */
+    /** @phpstan-var list<Person> */
     protected $people = [];
 
-    /** @psalm-var list<Address> */
+    /** @phpstan-var list<Address> */
     protected $addresses = [];
 
-    /** @psalm-var list<Country> */
+    /** @phpstan-var list<Country> */
     protected $countries = [];
 
-    /** @psalm-var list<State> */
+    /** @phpstan-var list<State> */
     protected $states = [];
 
-    /** @psalm-var list<City> */
+    /** @phpstan-var list<City> */
     protected $cities = [];
 
-    /** @psalm-var list<Travel> */
+    /** @phpstan-var list<Travel> */
     protected $travels = [];
 
-    /** @psalm-var list<Traveler> */
+    /** @phpstan-var list<Traveler> */
     protected $travelers = [];
 
-    /** @psalm-var list<Attraction> */
+    /** @phpstan-var list<Attraction> */
     protected $attractions = [];
 
-    /** @psalm-var list<AttractionInfo> */
+    /** @phpstan-var list<AttractionInfo> */
     protected $attractionsInfo = [];
 
-    /** @psalm-var list<TravelerProfile> */
+    /** @phpstan-var list<TravelerProfile> */
     protected $travelersWithProfile = [];
 
     /** @var Cache */

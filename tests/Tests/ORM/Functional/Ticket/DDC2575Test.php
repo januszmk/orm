@@ -15,13 +15,13 @@ use Doctrine\Tests\OrmFunctionalTestCase;
 /** @group DDC-2575 */
 class DDC2575Test extends OrmFunctionalTestCase
 {
-    /** @psalm-var list<DDC2575Root> */
+    /** @phpstan-var list<DDC2575Root> */
     private $rootsEntities = [];
 
-    /** @psalm-var list<DDC2575A> */
+    /** @phpstan-var list<DDC2575A> */
     private $aEntities = [];
 
-    /** @psalm-var list<DDC2575B> */
+    /** @phpstan-var list<DDC2575B> */
     private $bEntities = [];
 
     protected function setUp(): void

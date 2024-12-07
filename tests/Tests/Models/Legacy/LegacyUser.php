@@ -43,19 +43,19 @@ class LegacyUser
     public $name;
 
     /**
-     * @psalm-var Collection<int, LegacyArticle>
+     * @phpstan-var Collection<int, LegacyArticle>
      * @OneToMany(targetEntity="LegacyArticle", mappedBy="user")
      */
     public $articles;
 
     /**
-     * @psalm-var Collection<int, LegacyUserReference>
+     * @phpstan-var Collection<int, LegacyUserReference>
      * @OneToMany(targetEntity="LegacyUserReference", mappedBy="_source", cascade={"remove"})
      */
     public $references;
 
     /**
-     * @psalm-var Collection<int, LegacyCar>
+     * @phpstan-var Collection<int, LegacyCar>
      * @ManyToMany(targetEntity="LegacyCar", inversedBy="users", cascade={"persist", "merge"})
      * @JoinTable(name="legacy_users_cars",
      *      joinColumns={@JoinColumn(name="iUserId", referencedColumnName="iUserId")},
@@ -92,7 +92,7 @@ class LegacyUser
         $this->references[] = $reference;
     }
 
-    /** @psalm-return Collection<int, LegacyUserReference> */
+    /** @phpstan-return Collection<int, LegacyUserReference> */
     public function references(): Collection
     {
         return $this->references;
@@ -104,7 +104,7 @@ class LegacyUser
         $car->addUser($this);
     }
 
-    /** @psalm-return Collection<int, LegacyCar> */
+    /** @phpstan-return Collection<int, LegacyCar> */
     public function getCars(): Collection
     {
         return $this->cars;

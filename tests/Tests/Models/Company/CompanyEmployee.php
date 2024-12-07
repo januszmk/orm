@@ -37,13 +37,13 @@ class CompanyEmployee extends CompanyPerson
     private $startDate;
 
     /**
-     * @psalm-var Collection<int, CompanyContract>
+     * @phpstan-var Collection<int, CompanyContract>
      * @ManyToMany(targetEntity="CompanyContract", mappedBy="engineers", fetch="EXTRA_LAZY")
      */
     public $contracts;
 
     /**
-     * @psalm-var Collection<int, CompanyFlexUltraContract>
+     * @phpstan-var Collection<int, CompanyFlexUltraContract>
      * @OneToMany(targetEntity="CompanyFlexUltraContract", mappedBy="salesPerson", fetch="EXTRA_LAZY")
      */
     public $soldContracts;

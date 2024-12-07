@@ -9,7 +9,6 @@ on:
       - composer.*
       - src/**
       - phpstan*
-      - psalm*
       - tests/StaticAnalysis/**
   push:
     branches:
@@ -19,7 +18,6 @@ on:
       - composer.*
       - src/**
       - phpstan*
-      - psalm*
       - tests/StaticAnalysis/**
 
 jobs:
@@ -48,7 +46,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          php-version: "8.3"
+          php-version: "8.4"
 
       - name: "Require specific DBAL version"
         run: "composer require doctrine/dbal ^${{ matrix.dbal-version }} --no-update"
@@ -73,31 +71,3 @@ jobs:
       - name: "Run a static analysis with phpstan/phpstan"
         run: "vendor/bin/phpstan analyse -c phpstan-persistence2.neon"
         if: "${{ matrix.dbal-version == 'default' && matrix.persistence-version != 'default'}}"
-
-  static-analysis-psalm:
-    name: "Static Analysis with Psalm"
-    runs-on: "ubuntu-22.04"
-
-    strategy:
-      fail-fast: false
-
-    steps:
-      - name: "Checkout code"
-        uses: "actions/checkout@v4"
-
-      - name: "Install PHP"
-        uses: "shivammathur/setup-php@v2"
-        with:
-          coverage: "none"
-          php-version: "8.3"
-
-      - name: "Require specific persistence version"
-        run: "composer require doctrine/persistence ^3.1 --no-update"
-
-      - name: "Install dependencies with Composer"
-        uses: "ramsey/composer-install@v3"
-        with:
-          dependency-versions: "highest"
-
-      - name: "Run a static analysis with vimeo/psalm"
-        run: "vendor/bin/psalm --show-info=false --stats --output-format=github --threads=$(nproc)"

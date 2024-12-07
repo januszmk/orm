@@ -88,7 +88,7 @@ class DDC199ParentClass
     public $parentData;
 
     /**
-     * @psalm-var Collection<int, DDC199RelatedClass>
+     * @phpstan-var Collection<int, DDC199RelatedClass>
      * @OneToMany(targetEntity="DDC199RelatedClass", mappedBy="parent")
      */
     public $relatedEntities;

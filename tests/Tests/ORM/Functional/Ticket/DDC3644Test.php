@@ -154,13 +154,13 @@ class DDC3644User
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC3644Address>
+     * @phpstan-var Collection<int, DDC3644Address>
      * @OneToMany(targetEntity="DDC3644Address", mappedBy="user", orphanRemoval=true)
      */
     public $addresses = [];
 
     /**
-     * @psalm-var Collection<int, DDC3644Pet>
+     * @phpstan-var Collection<int, DDC3644Pet>
      * @OneToMany(targetEntity="DDC3644Pet", mappedBy="owner", orphanRemoval=true)
      */
     public $pets = [];

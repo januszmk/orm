@@ -64,7 +64,7 @@ class DDC2350User
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC2350Bug>
+     * @phpstan-var Collection<int, DDC2350Bug>
      * @OneToMany(targetEntity="DDC2350Bug", mappedBy="user", fetch="EAGER")
      */
     public $reportedBugs;

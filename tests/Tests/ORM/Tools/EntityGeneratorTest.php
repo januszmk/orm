@@ -1016,7 +1016,7 @@ class EntityGeneratorTest extends OrmTestCase
 
     /**
      * @return mixed[]
-     * @psalm-return list<array{
+     * @phpstan-return list<array{
      *     fieldName: string,
      *     phpType: string,
      *     dbType: string,
@@ -1117,7 +1117,7 @@ class EntityGeneratorTest extends OrmTestCase
         ];
     }
 
-    /** @psalm-return list<array{string, array{string}}> */
+    /** @phpstan-return list<array{string, array{string}}> */
     public static function getParseTokensInEntityFileData(): array
     {
         return [

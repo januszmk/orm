@@ -29,7 +29,7 @@ class DDC5934BaseContract
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC5934Member>
+     * @phpstan-var Collection<int, DDC5934Member>
      * @ManyToMany(targetEntity="DDC5934Member", fetch="LAZY", inversedBy="contracts")
      */
     #[ManyToMany(targetEntity: DDC5934Member::class, fetch: 'LAZY', inversedBy: 'contracts')]

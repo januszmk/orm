@@ -20,7 +20,7 @@ use const PHP_VERSION_ID;
 
 class ParameterTypeInfererTest extends OrmTestCase
 {
-    /** @psalm-return Generator<string, array{mixed, (int|string)}> */
+    /** @phpstan-return Generator<string, array{mixed, (int|string)}> */
     public static function providerParameterTypeInferer(): Generator
     {
         yield 'integer' => [1, Types::INTEGER];

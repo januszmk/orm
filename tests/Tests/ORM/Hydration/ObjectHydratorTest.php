@@ -34,7 +34,7 @@ class ObjectHydratorTest extends HydrationTestCase
 {
     use MockBuilderCompatibilityTools;
 
-    /** @psalm-return list<array{mixed}> */
+    /** @phpstan-return list<array{mixed}> */
     public static function provideDataForUserEntityResult(): array
     {
         return [
@@ -43,7 +43,7 @@ class ObjectHydratorTest extends HydrationTestCase
         ];
     }
 
-    /** @psalm-return list<array{mixed, mixed}> */
+    /** @phpstan-return list<array{mixed, mixed}> */
     public static function provideDataForMultipleRootEntityResult(): array
     {
         return [
@@ -54,7 +54,7 @@ class ObjectHydratorTest extends HydrationTestCase
         ];
     }
 
-    /** @psalm-return list<array{mixed}> */
+    /** @phpstan-return list<array{mixed}> */
     public static function provideDataForProductEntityResult(): array
     {
         return [

@@ -62,7 +62,7 @@ class DDC2106Entity
     public $parent;
 
     /**
-     * @psalm-var Collection<int, DDC2106Entity>
+     * @phpstan-var Collection<int, DDC2106Entity>
      * @OneToMany(targetEntity="DDC2106Entity", mappedBy="parent", cascade={"persist"})
      */
     public $children;

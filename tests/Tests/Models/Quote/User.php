@@ -38,7 +38,7 @@ class User
     public $name;
 
     /**
-     * @psalm-var Collection<int, Phone>
+     * @phpstan-var Collection<int, Phone>
      * @OneToMany(targetEntity="Phone", mappedBy="user", cascade={"persist"})
      */
     public $phones;
@@ -50,7 +50,7 @@ class User
     public $address;
 
     /**
-     * @psalm-var Collection<int, Group>
+     * @phpstan-var Collection<int, Group>
      * @ManyToMany(targetEntity="Group", inversedBy="users", cascade={"all"}, fetch="EXTRA_LAZY")
      * @JoinTable(name="`quote-users-groups`",
      *      joinColumns={
@@ -75,7 +75,7 @@ class User
         $this->groups = new ArrayCollection();
     }
 
-    /** @psalm-return Collection<int, Phone> */
+    /** @phpstan-return Collection<int, Phone> */
     public function getPhones(): Collection
     {
         return $this->phones;
@@ -86,7 +86,7 @@ class User
         return $this->address;
     }
 
-    /** @psalm-return Collection<int, Group> */
+    /** @phpstan-return Collection<int, Group> */
     public function getGroups(): Collection
     {
         return $this->groups;

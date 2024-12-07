@@ -534,7 +534,7 @@ class GH6830Category
     public $id;
 
     /**
-     * @psalm-var Collection<int, GH6830Board>
+     * @phpstan-var Collection<int, GH6830Board>
      * @OneToMany(targetEntity=GH6830Board::class, mappedBy="category")
      */
     public $boards;

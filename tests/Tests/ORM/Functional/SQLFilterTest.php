@@ -245,7 +245,7 @@ class SQLFilterTest extends OrmFunctionalTestCase
     }
 
     /**
-     * @psalm-param EntityManagerInterface&MockObject $em
+     * @phpstan-param EntityManagerInterface&MockObject $em
      *
      * @return FilterCollection&MockObject
      */

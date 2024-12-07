@@ -28,7 +28,7 @@ class EntityPersisterMock extends BasicEntityPersister
     /** @var int|null */
     private $mockIdGeneratorType;
 
-    /** @psalm-var list<array{generatedId: int, entity: object}> */
+    /** @phpstan-var list<array{generatedId: int, entity: object}> */
     private $postInsertIds = [];
 
     /** @var bool */
@@ -48,7 +48,7 @@ class EntityPersisterMock extends BasicEntityPersister
         ];
     }
 
-    /** @psalm-return list<array{generatedId: int, entity: object}> */
+    /** @phpstan-return list<array{generatedId: int, entity: object}> */
     public function executeInserts(): array
     {
         return $this->postInsertIds;

@@ -160,7 +160,7 @@ class EntityManagerTest extends OrmTestCase
         self::assertEquals('SELECT 1', $query->getDql());
     }
 
-    /** @psalm-return list<array{string}> */
+    /** @phpstan-return list<array{string}> */
     public static function dataMethodsAffectedByNoObjectArguments(): array
     {
         return [
@@ -181,7 +181,7 @@ class EntityManagerTest extends OrmTestCase
         $this->entityManager->$methodName(null);
     }
 
-    /** @psalm-return list<array{string}> */
+    /** @phpstan-return list<array{string}> */
     public static function dataAffectedByErrorIfClosedException(): array
     {
         return [

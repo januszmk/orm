@@ -340,7 +340,7 @@ class Phrase
     private $type;
 
     /**
-     * @psalm-var Collection<int, Definition>
+     * @phpstan-var Collection<int, Definition>
      * @OneToMany(targetEntity="Definition", mappedBy="phrase", cascade={"persist"})
      */
     private $definitions;
@@ -416,7 +416,7 @@ class PhraseType
     private $abbreviation;
 
     /**
-     * @psalm-var Collection<int, Phrase>
+     * @phpstan-var Collection<int, Phrase>
      * @OneToMany(targetEntity="Phrase", mappedBy="type")
      */
     private $phrases;

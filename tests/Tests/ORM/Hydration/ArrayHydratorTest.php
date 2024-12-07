@@ -16,7 +16,7 @@ use Doctrine\Tests\Models\Forum\ForumCategory;
 
 class ArrayHydratorTest extends HydrationTestCase
 {
-    /** @psalm-return list<array{mixed}> */
+    /** @phpstan-return list<array{mixed}> */
     public static function provideDataForUserEntityResult(): array
     {
         return [

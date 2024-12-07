@@ -48,7 +48,7 @@ class NavPointOfInterest
     private $country;
 
     /**
-     * @psalm-var Collection<int, NavUser>
+     * @phpstan-var Collection<int, NavUser>
      * @ManyToMany(targetEntity="NavUser", cascade={"persist"})
      * @JoinTable(name="navigation_pois_visitors",
      *      inverseJoinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},
@@ -94,7 +94,7 @@ class NavPointOfInterest
         $this->visitors[] = $user;
     }
 
-    /** @psalm-var Collection<int, NavUser> */
+    /** @phpstan-var Collection<int, NavUser> */
     public function getVisitors(): Collection
     {
         return $this->visitors;

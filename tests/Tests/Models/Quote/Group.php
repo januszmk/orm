@@ -42,7 +42,7 @@ class Group
     public $parent;
 
     /**
-     * @psalm-var Collection<int, User>
+     * @phpstan-var Collection<int, User>
      * @ManyToMany(targetEntity="User", mappedBy="groups")
      */
     public $users;

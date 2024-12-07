@@ -113,7 +113,7 @@ abstract class CompanyContract
     private $completed = false;
 
     /**
-     * @psalm-var Collection<int, CompanyEmployee>
+     * @phpstan-var Collection<int, CompanyEmployee>
      * @ManyToMany(targetEntity="CompanyEmployee", inversedBy="contracts")
      * @JoinTable(name="company_contract_employees",
      *    joinColumns={@JoinColumn(name="contract_id", referencedColumnName="id", onDelete="CASCADE")},
@@ -152,7 +152,7 @@ abstract class CompanyContract
         $this->salesPerson = $salesPerson;
     }
 
-    /** @psalm-return Collection<int, CompanyEmployee> */
+    /** @phpstan-return Collection<int, CompanyEmployee> */
     public function getEngineers(): Collection
     {
         return $this->engineers;

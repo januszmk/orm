@@ -177,7 +177,7 @@ class DDC1335User
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC1335Phone>
+     * @phpstan-var Collection<int, DDC1335Phone>
      * @OneToMany(targetEntity="DDC1335Phone", mappedBy="user", cascade={"persist", "remove"})
      */
     public $phones;

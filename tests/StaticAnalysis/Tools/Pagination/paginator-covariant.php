@@ -31,7 +31,7 @@ abstract class PaginatorFactory
     }
 
     /**
-     * @psalm-return Paginator<T>
+     * @phpstan-return Paginator<T>
      */
     abstract public function createPaginator(): Paginator;
 }

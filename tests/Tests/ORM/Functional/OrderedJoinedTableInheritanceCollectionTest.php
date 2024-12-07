@@ -108,14 +108,14 @@ abstract class OJTICPet
     public $mother;
 
     /**
-     * @psalm-var Collection<int, OJTICPet>
+     * @phpstan-var Collection<int, OJTICPet>
      * @OneToMany(targetEntity="OJTICPet", mappedBy="mother")
      * @OrderBy({"name" = "ASC"})
      */
     public $children;
 
     /**
-     * @psalm-var Collection<int, OJTICPet>
+     * @phpstan-var Collection<int, OJTICPet>
      * @ManyToMany(targetEntity="OJTICPet")
      * @JoinTable(name="OTJIC_Pet_Friends",
      *     joinColumns={@JoinColumn(name="pet_id", referencedColumnName="id")},

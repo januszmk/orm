@@ -46,7 +46,7 @@ class State
     protected $country;
 
     /**
-     * @psalm-var Collection<int, City>
+     * @phpstan-var Collection<int, City>
      * @Cache("NONSTRICT_READ_WRITE")
      * @OneToMany(targetEntity="City", mappedBy="state")
      */
@@ -89,13 +89,13 @@ class State
         $this->country = $country;
     }
 
-    /** @psalm-return Collection<int, City> */
+    /** @phpstan-return Collection<int, City> */
     public function getCities(): Collection
     {
         return $this->cities;
     }
 
-    /** @psalm-param Collection<int, City> $cities */
+    /** @phpstan-param Collection<int, City> $cities */
     public function setCities(Collection $cities): void
     {
         $this->cities = $cities;

@@ -38,7 +38,7 @@ class DDC3699Child extends DDC3699Parent
     public $oneRelation;
 
     /**
-     * @psalm-var Collection<int, DDC3699RelationMany>
+     * @phpstan-var Collection<int, DDC3699RelationMany>
      * @OneToMany(targetEntity="DDC3699RelationMany", mappedBy="child")
      */
     public $relations;

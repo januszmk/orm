@@ -179,7 +179,7 @@ class AttachEntityListenersListenerTestBarEntity
 
 class AttachEntityListenersListenerTestListener
 {
-    /** @psalm-var array<string,list<list<mixed>>> */
+    /** @phpstan-var array<string,list<list<mixed>>> */
     public $calls;
 
     public function prePersist(): void
@@ -200,7 +200,7 @@ class AttachEntityListenersListenerTestListener
 
 class AttachEntityListenersListenerTestListener2
 {
-    /** @psalm-var array<string,list<list<mixed>>> */
+    /** @phpstan-var array<string,list<list<mixed>>> */
     public $calls;
 
     public function prePersist(): void

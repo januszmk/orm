@@ -26,7 +26,7 @@ class InversedManyToManyEntity
     public $id1;
 
     /**
-     * @psalm-var Collection<int, OwningManyToManyEntity>
+     * @phpstan-var Collection<int, OwningManyToManyEntity>
      * @ManyToMany(targetEntity="OwningManyToManyEntity", mappedBy="associatedEntities")
      */
     public $associatedEntities;

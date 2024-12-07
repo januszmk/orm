@@ -75,7 +75,7 @@ class DDC3785Asset
     private $id;
 
     /**
-     * @psalm-var Collection<int, DDC3785Attribute>
+     * @phpstan-var Collection<int, DDC3785Attribute>
      * @ManyToMany(targetEntity="DDC3785Attribute", cascade={"persist"}, orphanRemoval=true)
      * @JoinTable(name="asset_attributes",
      *      joinColumns={@JoinColumn(name="asset_id", referencedColumnName="id")},
@@ -84,7 +84,7 @@ class DDC3785Asset
      */
     private $attributes;
 
-    /** @psalm-param list<DDC3785Attribute> $attributes */
+    /** @phpstan-param list<DDC3785Attribute> $attributes */
     public function __construct(DDC3785AssetId $id, $attributes = [])
     {
         $this->id         = $id;
@@ -100,7 +100,7 @@ class DDC3785Asset
         return $this->id;
     }
 
-    /** @psalm-return Collection<int, DDC3785Attribute> */
+    /** @phpstan-return Collection<int, DDC3785Attribute> */
     public function getAttributes()
     {
         return $this->attributes;

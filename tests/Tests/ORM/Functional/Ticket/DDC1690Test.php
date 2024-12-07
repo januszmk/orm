@@ -80,7 +80,7 @@ class DDC1690Test extends OrmFunctionalTestCase
 
 class NotifyBaseEntity implements NotifyPropertyChanged
 {
-    /** @psalm-var list<PropertyChangedListener> */
+    /** @phpstan-var list<PropertyChangedListener> */
     public $listeners = [];
 
     public function addPropertyChangedListener(PropertyChangedListener $listener): void

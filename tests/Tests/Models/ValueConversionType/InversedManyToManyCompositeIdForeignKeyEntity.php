@@ -36,7 +36,7 @@ class InversedManyToManyCompositeIdForeignKeyEntity
     public $foreignEntity;
 
     /**
-     * @psalm-var Collection<int, OwningManyToManyCompositeIdForeignKeyEntity>
+     * @phpstan-var Collection<int, OwningManyToManyCompositeIdForeignKeyEntity>
      * @ManyToMany(targetEntity="OwningManyToManyCompositeIdForeignKeyEntity", mappedBy="associatedEntities")
      */
     public $associatedEntities;

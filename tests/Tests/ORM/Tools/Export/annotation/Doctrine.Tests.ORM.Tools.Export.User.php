@@ -74,14 +74,14 @@ class User
     public $mainGroup;
 
     /**
-     * @psalm-var Collection<int, Phonenumber>
+     * @phpstan-var Collection<int, Phonenumber>
      * @OneToMany(targetEntity="Doctrine\Tests\ORM\Tools\Export\Phonenumber", mappedBy="user", cascade={"persist", "merge"}, orphanRemoval=true)
      * @OrderBy({"number"="ASC"})
      */
     public $phonenumbers;
 
     /**
-     * @psalm-var Collection<int, Group>
+     * @phpstan-var Collection<int, Group>
      * @ManyToMany(targetEntity="Doctrine\Tests\ORM\Tools\Export\Group", cascade={"all"}, fetch="EXTRA_LAZY")
      * @JoinTable(name="cms_users_groups",
      *    joinColumns={@JoinColumn(name="user_id", referencedColumnName="id", nullable=false, unique=false)},

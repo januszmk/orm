@@ -34,7 +34,7 @@ class Market
 
     /**
      * @OneToMany(targetEntity="Stock", mappedBy="market", indexBy="symbol")
-     * @psalm-var ArrayCollection<string, Stock>
+     * @phpstan-var ArrayCollection<string, Stock>
      */
     public $stocks;
 

@@ -21,7 +21,7 @@ abstract class RegionTestCase extends OrmFunctionalTestCase
 {
     /**
      * @var Region
-     * @psalm-var TRegion
+     * @phpstan-var TRegion
      */
     protected $region;
 
@@ -36,10 +36,10 @@ abstract class RegionTestCase extends OrmFunctionalTestCase
         $this->region        = $this->createRegion();
     }
 
-    /** @psalm-return TRegion */
+    /** @phpstan-return TRegion */
     abstract protected function createRegion(): Region;
 
-    /** @psalm-return list<array{CacheKeyMock, CacheEntryMock}> */
+    /** @phpstan-return list<array{CacheKeyMock, CacheEntryMock}> */
     public static function dataProviderCacheValues(): array
     {
         return [

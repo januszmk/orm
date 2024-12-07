@@ -37,7 +37,7 @@ class DoctrineGlobalArticle
     protected $text;
 
     /**
-     * @psalm-var Collection<int, DoctrineGlobalUser>
+     * @phpstan-var Collection<int, DoctrineGlobalUser>
      * @ManyToMany(targetEntity="DoctrineGlobalUser")
      * @JoinTable(name="author_articles",
      *      joinColumns={@JoinColumn(name="article_id", referencedColumnName="id")},
@@ -47,7 +47,7 @@ class DoctrineGlobalArticle
     protected $author;
 
     /**
-     * @psalm-var Collection<int, DoctrineGlobalUser>
+     * @phpstan-var Collection<int, DoctrineGlobalUser>
      * @ManyToMany(targetEntity="DoctrineGlobalUser")
      * @JoinTable(name="editor_articles",
      *      joinColumns={@JoinColumn(name="article_id", referencedColumnName="id")},

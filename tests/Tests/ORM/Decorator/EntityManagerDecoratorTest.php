@@ -48,7 +48,7 @@ class EntityManagerDecoratorTest extends TestCase
         $this->wrapped = $this->createMock(EntityManagerInterface::class);
     }
 
-    /** @psalm-return Generator<string, mixed[]> */
+    /** @phpstan-return Generator<string, mixed[]> */
     public static function getMethodParameters(): Generator
     {
         $class = new ReflectionClass(EntityManagerInterface::class);

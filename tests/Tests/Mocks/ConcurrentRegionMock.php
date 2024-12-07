@@ -22,13 +22,13 @@ use function array_shift;
  */
 class ConcurrentRegionMock implements ConcurrentRegion
 {
-    /** @psalm-var array<string, list<array<string, mixed>>> */
+    /** @phpstan-var array<string, list<array<string, mixed>>> */
     public $calls = [];
 
-    /** @psalm-var array<string, list<Exception>> */
+    /** @phpstan-var array<string, list<Exception>> */
     public $exceptions = [];
 
-    /** @psalm-var array<string, Lock> */
+    /** @phpstan-var array<string, Lock> */
     public $locks = [];
 
     /** @var Region */

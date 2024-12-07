@@ -103,7 +103,7 @@ class DDC2759Category
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC2759MetadataCategory>
+     * @phpstan-var Collection<int, DDC2759MetadataCategory>
      * @OneToMany(targetEntity="DDC2759MetadataCategory", mappedBy="category")
      */
     public $metadataCategories;
@@ -130,7 +130,7 @@ class DDC2759QualificationMetadata
     public $content;
 
     /**
-     * @psalm-var Collection<int, DDC2759MetadataCategory>
+     * @phpstan-var Collection<int, DDC2759MetadataCategory>
      * @OneToMany(targetEntity="DDC2759MetadataCategory", mappedBy="metadata")
      */
     protected $metadataCategories;

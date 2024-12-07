@@ -163,7 +163,7 @@ class DDC729A
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC729B>
+     * @phpstan-var Collection<int, DDC729B>
      * @ManyToMany(targetEntity="DDC729B", inversedBy="related")
      */
     public $related;
@@ -186,7 +186,7 @@ class DDC729B
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC729B>
+     * @phpstan-var Collection<int, DDC729B>
      * @ManyToMany(targetEntity="DDC729B", mappedBy="related")
      */
     public $related;

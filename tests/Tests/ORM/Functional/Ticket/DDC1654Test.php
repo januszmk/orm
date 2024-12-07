@@ -146,7 +146,7 @@ class DDC1654Post
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC1654Comment>
+     * @phpstan-var Collection<int, DDC1654Comment>
      * @ManyToMany(targetEntity="DDC1654Comment", orphanRemoval=true,
      * cascade={"persist"})
      */

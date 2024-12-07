@@ -119,7 +119,7 @@ class DDC881User
     private $name;
 
     /**
-     * @psalm-var Collection<int, DDC881PhoneNumber>
+     * @phpstan-var Collection<int, DDC881PhoneNumber>
      * @OneToMany(targetEntity="DDC881PhoneNumber",mappedBy="id")
      */
     private $phoneNumbers;
@@ -159,7 +159,7 @@ class DDC881PhoneNumber
     private $phonenumber;
 
     /**
-     * @psalm-var Collection<int, DDC881PhoneCall>
+     * @phpstan-var Collection<int, DDC881PhoneCall>
      * @OneToMany(targetEntity="DDC881PhoneCall", mappedBy="phonenumber")
      */
     private $calls;
@@ -184,7 +184,7 @@ class DDC881PhoneNumber
         $this->phonenumber = $phoneNumber;
     }
 
-    /** @psalm-var Collection<int, DDC881PhoneCall> */
+    /** @phpstan-var Collection<int, DDC881PhoneCall> */
     public function getCalls(): Collection
     {
         return $this->calls;

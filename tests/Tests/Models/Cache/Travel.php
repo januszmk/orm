@@ -48,7 +48,7 @@ class Travel
     protected $traveler;
 
     /**
-     * @psalm-var Collection<int, City>
+     * @phpstan-var Collection<int, City>
      * @Cache
      * @ManyToMany(targetEntity="City", inversedBy="travels", cascade={"persist", "remove"})
      * @JoinTable(name="cache_visited_cities",
@@ -84,7 +84,7 @@ class Travel
         $this->traveler = $traveler;
     }
 
-    /** @psalm-return Collection<int, City> */
+    /** @phpstan-return Collection<int, City> */
     public function getVisitedCities(): Collection
     {
         return $this->visitedCities;

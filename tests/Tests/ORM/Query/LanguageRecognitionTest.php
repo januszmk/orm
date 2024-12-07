@@ -38,7 +38,7 @@ class LanguageRecognitionTest extends OrmTestCase
         $this->parseDql($dql);
     }
 
-    /** @psalm-param array<string, mixed> $hints */
+    /** @phpstan-param array<string, mixed> $hints */
     public function parseDql(string $dql, array $hints = []): ParserResult
     {
         $query = $this->entityManager->createQuery($dql);
@@ -86,7 +86,7 @@ class LanguageRecognitionTest extends OrmTestCase
         $this->parseDql($dql);
     }
 
-    /** @psalm-return list<array{string}> */
+    /** @phpstan-return list<array{string}> */
     public static function invalidDQL(): array
     {
         return [

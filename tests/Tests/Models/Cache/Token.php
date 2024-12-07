@@ -48,7 +48,7 @@ class Token
     public $client;
 
     /**
-     * @psalm-var Collection<int, Login>
+     * @phpstan-var Collection<int, Login>
      * @OneToMany(targetEntity="Login", cascade={"persist", "remove"}, mappedBy="token")
      */
     public $logins;

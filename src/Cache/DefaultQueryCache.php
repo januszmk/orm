@@ -29,7 +29,7 @@ use function reset;
 /**
  * Default query cache implementation.
  *
- * @psalm-import-type AssociationMapping from ClassMetadata
+ * @phpstan-import-type AssociationMapping from ClassMetadata
  */
 class DefaultQueryCache implements QueryCache
 {
@@ -331,7 +331,7 @@ class DefaultQueryCache implements QueryCache
      * @param mixed              $assocValue
      *
      * @return mixed[]|null
-     * @psalm-return array{targetEntity: class-string, type: mixed, list?: array[], identifier?: array}|null
+     * @phpstan-return array{targetEntity: class-string, type: mixed, list?: array[], identifier?: array}|null
      */
     private function storeAssociationCache(QueryCacheKey $key, array $assoc, $assocValue): ?array
     {
@@ -386,7 +386,7 @@ class DefaultQueryCache implements QueryCache
      * @param object $entity
      *
      * @return mixed[]|object|null
-     * @psalm-return list<mixed>|object|null
+     * @phpstan-return list<mixed>|object|null
      */
     private function getAssociationValue(
         ResultSetMapping $rsm,
@@ -414,10 +414,10 @@ class DefaultQueryCache implements QueryCache
 
     /**
      * @param mixed $value
-     * @psalm-param array<array-key, array{field: string, class: string}> $path
+     * @phpstan-param array<array-key, array{field: string, class: string}> $path
      *
      * @return mixed[]|object|null
-     * @psalm-return list<mixed>|object|null
+     * @phpstan-return list<mixed>|object|null
      */
     private function getAssociationPathValue($value, array $path)
     {

@@ -34,7 +34,7 @@ class DDC117Editor
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC117Translation>
+     * @phpstan-var Collection<int, DDC117Translation>
      * @ManyToMany(targetEntity="DDC117Translation", inversedBy="reviewedByEditors")
      * @JoinTable(
      *   inverseJoinColumns={

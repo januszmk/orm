@@ -37,7 +37,7 @@ class ForumCategory
     public $name;
 
     /**
-     * @psalm-var Collection<int, ForumBoard>
+     * @phpstan-var Collection<int, ForumBoard>
      * @OneToMany(targetEntity="ForumBoard", mappedBy="category")
      */
     public $boards;

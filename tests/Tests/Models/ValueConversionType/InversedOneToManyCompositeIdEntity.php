@@ -39,7 +39,7 @@ class InversedOneToManyCompositeIdEntity
     public $someProperty;
 
     /**
-     * @psalm-var Collection<int, OwningManyToOneCompositeIdEntity>
+     * @phpstan-var Collection<int, OwningManyToOneCompositeIdEntity>
      * @OneToMany(targetEntity="OwningManyToOneCompositeIdEntity", mappedBy="associatedEntity")
      */
     public $associatedEntities;

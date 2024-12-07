@@ -88,7 +88,7 @@ class CascadeRemoveOrderEntityO
     private $oneToOneG;
 
     /**
-     * @psalm-var Collection<int, CascadeRemoveOrderEntityG>
+     * @phpstan-var Collection<int, CascadeRemoveOrderEntityG>
      * @OneToMany(
      *     targetEntity="Doctrine\Tests\ORM\Functional\CascadeRemoveOrderEntityG",
      *     mappedBy="ownerO",
@@ -122,7 +122,7 @@ class CascadeRemoveOrderEntityO
         $this->oneToManyG->add($eG);
     }
 
-    /** @psalm-return array<int, CascadeRemoveOrderEntityG> */
+    /** @phpstan-return array<int, CascadeRemoveOrderEntityG> */
     public function getOneToManyGs(): array
     {
         return $this->oneToManyG->toArray();

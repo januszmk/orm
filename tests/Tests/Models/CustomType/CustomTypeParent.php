@@ -43,13 +43,13 @@ class CustomTypeParent
     public $child;
 
     /**
-     * @psalm-var Collection<int, CustomTypeParent>
+     * @phpstan-var Collection<int, CustomTypeParent>
      * @ManyToMany(targetEntity="Doctrine\Tests\Models\CustomType\CustomTypeParent", mappedBy="myFriends")
      */
     private $friendsWithMe;
 
     /**
-     * @psalm-var Collection<int, CustomTypeParent>
+     * @phpstan-var Collection<int, CustomTypeParent>
      * @ManyToMany(targetEntity="Doctrine\Tests\Models\CustomType\CustomTypeParent", inversedBy="friendsWithMe")
      * @JoinTable(
      *     name="customtype_parent_friends",
@@ -71,7 +71,7 @@ class CustomTypeParent
         $friend->addFriendWithMe($this);
     }
 
-    /** @psalm-return Collection<int, CustomTypeParent> */
+    /** @phpstan-return Collection<int, CustomTypeParent> */
     public function getMyFriends(): Collection
     {
         return $this->myFriends;
@@ -82,7 +82,7 @@ class CustomTypeParent
         $this->getFriendsWithMe()->add($friend);
     }
 
-    /** @psalm-return Collection<int, CustomTypeParent> */
+    /** @phpstan-return Collection<int, CustomTypeParent> */
     public function getFriendsWithMe()
     {
         return $this->friendsWithMe;

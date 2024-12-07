@@ -67,7 +67,7 @@ class City
     public $travels;
 
     /**
-     * @psalm-var Collection<int, Attraction>
+     * @phpstan-var Collection<int, Attraction>
      * @Cache
      * @OrderBy({"name" = "ASC"})
      * @OneToMany(targetEntity="Attraction", mappedBy="city")
@@ -120,7 +120,7 @@ class City
         $this->travels[] = $travel;
     }
 
-    /** @psalm-return Collection<int, Travel> */
+    /** @phpstan-return Collection<int, Travel> */
     public function getTravels(): Collection
     {
         return $this->travels;
@@ -131,7 +131,7 @@ class City
         $this->attractions[] = $attraction;
     }
 
-    /** @psalm-return Collection<int, Attraction> */
+    /** @phpstan-return Collection<int, Attraction> */
     public function getAttractions(): Collection
     {
         return $this->attractions;

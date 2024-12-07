@@ -89,7 +89,7 @@ abstract class Role
     public $user;
 
     /**
-     * @psalm-var Collection<int, Authorization>
+     * @phpstan-var Collection<int, Authorization>
      * @OneToMany(targetEntity="Authorization", mappedBy="role", cascade={"all"}, orphanRemoval=true)
      */
     public $authorizations;
@@ -151,13 +151,13 @@ class User
     public $id;
 
     /**
-     * @psalm-var Collection<int, Role>
+     * @phpstan-var Collection<int, Role>
      * @OneToMany(targetEntity="Role", mappedBy="user", cascade={"all"}, orphanRemoval=true)
      */
     public $roles;
 
     /**
-     * @psalm-var Collection<int, Authorization>
+     * @phpstan-var Collection<int, Authorization>
      * @OneToMany(targetEntity="Authorization", mappedBy="user", cascade={"all"}, orphanRemoval=true)
      */
     public $authorizations;

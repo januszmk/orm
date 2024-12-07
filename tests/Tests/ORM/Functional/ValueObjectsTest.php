@@ -344,7 +344,7 @@ class ValueObjectsTest extends OrmFunctionalTestCase
         $this->createSchemaForModels(__NAMESPACE__ . '\\' . $embeddableClassName);
     }
 
-    /** @psalm-return list<array{string, string}> */
+    /** @phpstan-return list<array{string, string}> */
     public static function getInfiniteEmbeddableNestingData(): array
     {
         return [

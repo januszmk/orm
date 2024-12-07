@@ -131,7 +131,7 @@ class DDC2256Group
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC2256User>
+     * @phpstan-var Collection<int, DDC2256User>
      * @OneToMany(targetEntity="DDC2256User", mappedBy="group")
      */
     public $users;

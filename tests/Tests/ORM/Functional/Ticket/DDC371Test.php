@@ -96,7 +96,7 @@ class DDC371Parent
     public $data;
 
     /**
-     * @psalm-var Collection<int, DDC371Child>
+     * @phpstan-var Collection<int, DDC371Child>
      * @OneToMany(targetEntity="DDC371Child", mappedBy="parent")
      */
     public $children;

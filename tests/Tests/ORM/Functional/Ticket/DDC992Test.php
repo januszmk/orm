@@ -151,13 +151,13 @@ class DDC992Role
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC992Role>
+     * @phpstan-var Collection<int, DDC992Role>
      * @ManyToMany(targetEntity="DDC992Role", mappedBy="extends")
      */
     public $extendedBy;
 
     /**
-     * @psalm-var Collection<int, DDC992Role>
+     * @phpstan-var Collection<int, DDC992Role>
      * @ManyToMany (targetEntity="DDC992Role", inversedBy="extendedBy")
      * @JoinTable(name="RoleRelations",
      *     joinColumns={@JoinColumn(name="roleID", referencedColumnName="roleID")},

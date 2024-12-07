@@ -72,7 +72,7 @@ class DDC3033Test extends OrmFunctionalTestCase
  */
 class DDC3033Product
 {
-    /** @psalm-var array<string, array{mixed, mixed}> */
+    /** @phpstan-var array<string, array{mixed, mixed}> */
     public $changeSet = [];
 
     /**

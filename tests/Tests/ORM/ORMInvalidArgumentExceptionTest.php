@@ -26,7 +26,7 @@ class ORMInvalidArgumentExceptionTest extends TestCase
         self::assertSame($expectedMessage, $exception->getMessage());
     }
 
-    /** @psalm-return list<array{mixed, string}> */
+    /** @phpstan-return list<array{mixed, string}> */
     public static function invalidEntityNames(): array
     {
         return [

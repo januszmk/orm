@@ -180,7 +180,7 @@ class Group
     public $id;
 
     /**
-     * @psalm-var Collection<int, User>
+     * @phpstan-var Collection<int, User>
      * @ManyToMany(targetEntity="User", mappedBy="groups")
      */
     public $users;
@@ -198,7 +198,7 @@ class User
     public $id;
 
     /**
-     * @psalm-var Collection<int, Group>
+     * @phpstan-var Collection<int, Group>
      * @ManyToMany(targetEntity="Group", inversedBy="users")
      * @JoinTable(
      * name="user_group",

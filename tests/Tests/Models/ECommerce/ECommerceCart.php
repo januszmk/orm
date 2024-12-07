@@ -47,7 +47,7 @@ class ECommerceCart
     private $customer;
 
     /**
-     * @psalm-var Collection<int, ECommerceProduct>
+     * @phpstan-var Collection<int, ECommerceProduct>
      * @ManyToMany(targetEntity="ECommerceProduct", cascade={"persist"})
      * @JoinTable(name="ecommerce_carts_products",
      *      joinColumns={@JoinColumn(name="cart_id", referencedColumnName="id")},
@@ -97,7 +97,7 @@ class ECommerceCart
         return $this->customer;
     }
 
-    /** @psalm-return Collection<int, ECommerceProduct> */
+    /** @phpstan-return Collection<int, ECommerceProduct> */
     public function getProducts(): Collection
     {
         return $this->products;

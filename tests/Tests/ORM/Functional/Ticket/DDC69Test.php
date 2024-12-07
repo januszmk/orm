@@ -168,7 +168,7 @@ class Lemma
         }
     }
 
-    /** @psalm-return Collection<int, Relation> */
+    /** @phpstan-return Collection<int, Relation> */
     public function getRelations(): Collection
     {
         return $this->relations;
@@ -340,7 +340,7 @@ class RelationType
         }
     }
 
-    /** @psalm-return Collection<int, Relation> */
+    /** @phpstan-return Collection<int, Relation> */
     public function getRelations(): Collection
     {
         return $this->relations;

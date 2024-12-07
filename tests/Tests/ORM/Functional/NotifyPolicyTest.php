@@ -96,7 +96,7 @@ class NotifyPolicyTest extends OrmFunctionalTestCase
 
 class NotifyBaseEntity implements NotifyPropertyChanged
 {
-    /** @psalm-var list<PropertyChangedListener> */
+    /** @phpstan-var list<PropertyChangedListener> */
     public $listeners = [];
 
     public function addPropertyChangedListener(PropertyChangedListener $listener): void
@@ -135,7 +135,7 @@ class NotifyUser extends NotifyBaseEntity
     private $name;
 
     /**
-     * @psalm-var Collection<int, NotifyGroup>
+     * @phpstan-var Collection<int, NotifyGroup>
      * @ManyToMany(targetEntity="NotifyGroup")
      */
     private $groups;
@@ -161,7 +161,7 @@ class NotifyUser extends NotifyBaseEntity
         $this->name = $name;
     }
 
-    /** @psalm-return Collection<int, NotifyGroup> */
+    /** @phpstan-return Collection<int, NotifyGroup> */
     public function getGroups(): Collection
     {
         return $this->groups;
@@ -186,7 +186,7 @@ class NotifyGroup extends NotifyBaseEntity
     private $name;
 
     /**
-     * @psalm-var Collection<int, NotifyUser>
+     * @phpstan-var Collection<int, NotifyUser>
      * @ManyToMany(targetEntity="NotifyUser", mappedBy="groups")
      */
     private $users;
@@ -212,7 +212,7 @@ class NotifyGroup extends NotifyBaseEntity
         $this->name = $name;
     }
 
-    /** @psalm-return Collection<int, NotifyUser> */
+    /** @phpstan-return Collection<int, NotifyUser> */
     public function getUsers(): Collection
     {
         return $this->users;

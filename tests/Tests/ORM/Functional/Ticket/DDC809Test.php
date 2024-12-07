@@ -76,7 +76,7 @@ class DDC809Variant
     protected $variantId;
 
     /**
-     * @psalm-var Collection<int, DDC809SpecificationValue>
+     * @phpstan-var Collection<int, DDC809SpecificationValue>
      * @ManyToMany(targetEntity="DDC809SpecificationValue", inversedBy="Variants")
      * @JoinTable(name="var_spec_value_test",
      *   joinColumns={
@@ -89,7 +89,7 @@ class DDC809Variant
      */
     protected $specificationValues;
 
-    /** @psalm-return Collection<int, DDC809SpecificationValue> */
+    /** @phpstan-return Collection<int, DDC809SpecificationValue> */
     public function getSpecificationValues(): Collection
     {
         return $this->specificationValues;
@@ -110,7 +110,7 @@ class DDC809SpecificationValue
     protected $specificationValueId;
 
     /**
-     * @psalm-var Collection<int,DDC809Variant>
+     * @phpstan-var Collection<int,DDC809Variant>
      * @ManyToMany(targetEntity="DDC809Variant", mappedBy="SpecificationValues")
      */
     protected $variants;

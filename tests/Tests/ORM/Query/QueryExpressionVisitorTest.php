@@ -42,7 +42,7 @@ class QueryExpressionVisitorTest extends TestCase
     }
 
     /**
-     * @psalm-return list<array{
+     * @phpstan-return list<array{
      *                   0: CriteriaComparison,
      *                   1: QueryBuilder\Comparison|QueryBuilder\Func|string,
      *                   2?: Parameter,

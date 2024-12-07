@@ -31,7 +31,7 @@ class DDC117Article
     private $title;
 
     /**
-     * @psalm-var Collection<int, DDC117Reference>
+     * @phpstan-var Collection<int, DDC117Reference>
      * @OneToMany(targetEntity="DDC117Reference", mappedBy="source", cascade={"remove"})
      */
     private $references;
@@ -43,7 +43,7 @@ class DDC117Article
     private $details;
 
     /**
-     * @psalm-var Collection<int, DDC117Translation>
+     * @phpstan-var Collection<int, DDC117Translation>
      * @OneToMany(targetEntity="DDC117Translation", mappedBy="article", cascade={"persist", "remove"})
      */
     private $translations;

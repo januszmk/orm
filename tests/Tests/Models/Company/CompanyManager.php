@@ -32,7 +32,7 @@ class CompanyManager extends CompanyEmployee
     private $car;
 
     /**
-     * @psalm-var Collection<int, CompanyFlexContract>
+     * @phpstan-var Collection<int, CompanyFlexContract>
      * @ManyToMany(targetEntity="CompanyFlexContract", mappedBy="managers", fetch="EXTRA_LAZY")
      */
     public $managedContracts;

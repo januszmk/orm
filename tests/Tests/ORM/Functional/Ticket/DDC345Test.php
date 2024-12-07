@@ -87,7 +87,7 @@ class DDC345User
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC345Membership>
+     * @phpstan-var Collection<int, DDC345Membership>
      * @OneToMany(targetEntity="DDC345Membership", mappedBy="user", cascade={"persist"})
      */
     public $memberships;
@@ -116,7 +116,7 @@ class DDC345Group
     public $name;
 
     /**
-     * @psalm-var Collection<int, DDC345Membership>
+     * @phpstan-var Collection<int, DDC345Membership>
      * @OneToMany(targetEntity="DDC345Membership", mappedBy="group", cascade={"persist"})
      */
     public $memberships;

@@ -85,7 +85,7 @@ class DDC1514EntityA
     public $title;
 
     /**
-     * @psalm-var Collection<int, DDC1514EntityB>
+     * @phpstan-var Collection<int, DDC1514EntityB>
      * @ManyToMany(targetEntity="DDC1514EntityB", mappedBy="entityAFrom")
      */
     public $entitiesB;

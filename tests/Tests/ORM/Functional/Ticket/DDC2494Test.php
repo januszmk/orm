@@ -99,7 +99,7 @@ class DDC2494Currency
     protected $temp;
 
     /**
-     * @psalm-var Collection<int, DDC2494Campaign>
+     * @phpstan-var Collection<int, DDC2494Campaign>
      * @OneToMany(targetEntity="DDC2494Campaign", mappedBy="currency")
      */
     protected $campaigns;
@@ -120,7 +120,7 @@ class DDC2494Currency
         return $this->temp;
     }
 
-    /** @psalm-return Collection<int, DDC2494Campaign> */
+    /** @phpstan-return Collection<int, DDC2494Campaign> */
     public function getCampaigns(): Collection
     {
         return $this->campaigns;
@@ -166,7 +166,7 @@ class DDC2494Campaign
 
 class DDC2494TinyIntType extends Type
 {
-    /** @psalm-var array<string, list<array{value:mixed, return: string, platform: AbstractPlatform}>> */
+    /** @phpstan-var array<string, list<array{value:mixed, return: string, platform: AbstractPlatform}>> */
     public static $calls = [];
 
     /**

@@ -69,7 +69,7 @@ class DDC1526Menu
     public $parent;
 
     /**
-     * @psalm-var Collection<int, DDC1526Menu>
+     * @phpstan-var Collection<int, DDC1526Menu>
      * @OneToMany(targetEntity="DDC1526Menu", mappedBy="parent")
      */
     public $children;

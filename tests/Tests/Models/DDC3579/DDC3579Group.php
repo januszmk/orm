@@ -35,7 +35,7 @@ class DDC3579Group
     private $name;
 
     /**
-     * @psalm-var Collection<int, DDC3579Admin>
+     * @phpstan-var Collection<int, DDC3579Admin>
      * @ManyToMany(targetEntity="DDC3579Admin", mappedBy="groups")
      */
     #[ManyToMany(targetEntity: DDC3579Admin::class, mappedBy: 'groups')]
@@ -62,7 +62,7 @@ class DDC3579Group
         $this->admins[] = $admin;
     }
 
-    /** @psalm-return Collection<int, DDC3579Admin> */
+    /** @phpstan-return Collection<int, DDC3579Admin> */
     public function getAdmins(): Collection
     {
         return $this->admins;

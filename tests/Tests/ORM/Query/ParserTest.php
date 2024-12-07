@@ -112,7 +112,7 @@ class ParserTest extends OrmTestCase
         $parser->match($expectedToken);
     }
 
-    /** @psalm-return list<array{int, string}> */
+    /** @phpstan-return list<array{int, string}> */
     public static function validMatches(): array
     {
         /*
@@ -133,7 +133,7 @@ class ParserTest extends OrmTestCase
         ];
     }
 
-    /** @psalm-return list<array{int, string}> */
+    /** @phpstan-return list<array{int, string}> */
     public static function invalidMatches(): array
     {
         return [

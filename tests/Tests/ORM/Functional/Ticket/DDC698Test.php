@@ -101,7 +101,7 @@ class DDC698Privilege
     protected $name;
 
     /**
-     * @psalm-var Collection<int, DDC698Role>
+     * @phpstan-var Collection<int, DDC698Role>
      * @ManyToMany(targetEntity="DDC698Role", mappedBy="privilege")
      */
     protected $roles;

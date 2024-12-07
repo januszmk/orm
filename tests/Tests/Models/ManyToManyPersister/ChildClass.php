@@ -47,7 +47,7 @@ class ChildClass
      *     inverseJoinColumns={@JoinColumn(name="parent_id", referencedColumnName="id")}
      * )
      * @var Collection|ParentClass[]
-     * @psalm-var Collection<ParentClass>
+     * @phpstan-var Collection<ParentClass>
      */
     public $parents;
 

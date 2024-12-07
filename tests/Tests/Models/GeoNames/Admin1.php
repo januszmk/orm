@@ -39,7 +39,7 @@ class Admin1
     public $country;
 
     /**
-     * @psalm-var Collection<int, Admin1AlternateName>
+     * @phpstan-var Collection<int, Admin1AlternateName>
      * @OneToMany(targetEntity="Admin1AlternateName", mappedBy="admin1")
      * @Cache
      */

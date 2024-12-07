@@ -90,7 +90,7 @@ class CompanyPerson
     private $spouse;
 
     /**
-     * @psalm-var Collection<int, CompanyPerson>
+     * @phpstan-var Collection<int, CompanyPerson>
      * @ManyToMany(targetEntity="CompanyPerson")
      * @JoinTable(
      *     name="company_persons_friends",
@@ -129,7 +129,7 @@ class CompanyPerson
         return $this->spouse;
     }
 
-    /** @psalm-return Collection<int, CompanyPerson> */
+    /** @phpstan-return Collection<int, CompanyPerson> */
     public function getFriends(): Collection
     {
         return $this->friends;

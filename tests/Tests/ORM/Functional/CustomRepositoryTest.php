@@ -95,7 +95,7 @@ class MinimalRepository implements ObjectRepository
     /** @var ClassMetadata<TEntity> */
     private $class;
 
-    /** @psalm-param ClassMetadata<TEntity> $class */
+    /** @phpstan-param ClassMetadata<TEntity> $class */
     public function __construct(EntityManagerInterface $em, ClassMetadata $class)
     {
         $this->em    = $em;

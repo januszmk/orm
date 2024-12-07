@@ -48,8 +48,8 @@ class GH10288Test extends OrmFunctionalTestCase
 
     /**
      * @param class-string $personType
-     * @psalm-param GH10288BossWithEnumType|GH10288BossCustomEnumType $boss
-     * @psalm-param GH10288EmployeeWithEnumType|GH10288EmployeeCustomEnumType $employee
+     * @phpstan-param GH10288BossWithEnumType|GH10288BossCustomEnumType $boss
+     * @phpstan-param GH10288EmployeeWithEnumType|GH10288EmployeeCustomEnumType $employee
      */
     private function performEnumDiscriminatorTest($boss, $employee, string $personType): void
     {

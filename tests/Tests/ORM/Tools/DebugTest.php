@@ -128,7 +128,7 @@ class DebugTest extends DoctrineTestCase
     }
 
     /**
-     * @psalm-return array<string, array{TestAsset\ParentClass, mixed[]}>
+     * @phpstan-return array<string, array{TestAsset\ParentClass, mixed[]}>
      */
     public function provideAttributesCases(): iterable
     {

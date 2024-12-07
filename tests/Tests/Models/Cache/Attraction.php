@@ -54,7 +54,7 @@ abstract class Attraction
     protected $city;
 
     /**
-     * @psalm-var Collection<int, AttractionInfo>
+     * @phpstan-var Collection<int, AttractionInfo>
      * @Cache
      * @OneToMany(targetEntity="AttractionInfo", mappedBy="attraction")
      */
@@ -97,7 +97,7 @@ abstract class Attraction
         $this->city = $city;
     }
 
-    /** @psalm-return Collection<int, AttractionInfo> */
+    /** @phpstan-return Collection<int, AttractionInfo> */
     public function getInfos(): Collection
     {
         return $this->infos;

@@ -81,7 +81,7 @@ class DDC1400Article
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC1400UserState>
+     * @phpstan-var Collection<int, DDC1400UserState>
      * @OneToMany(targetEntity="DDC1400UserState", mappedBy="article", indexBy="userId", fetch="EXTRA_LAZY")
      */
     public $userStates;
@@ -99,7 +99,7 @@ class DDC1400User
     public $id;
 
     /**
-     * @psalm-var Collection<int, DDC1400UserState>
+     * @phpstan-var Collection<int, DDC1400UserState>
      * @OneToMany(targetEntity="DDC1400UserState", mappedBy="user", indexBy="articleId", fetch="EXTRA_LAZY")
      */
     public $userStates;

@@ -634,7 +634,7 @@ class AttributeDriver extends CompatibilityAnnotationDriver
      * Parses the given method.
      *
      * @return list<array{string, string}>
-     * @psalm-return list<array{string, (Events::*)}>
+     * @phpstan-return list<array{string, (Events::*)}>
      */
     private function getMethodCallbacks(ReflectionMethod $method): array
     {
@@ -684,7 +684,7 @@ class AttributeDriver extends CompatibilityAnnotationDriver
      * @param Mapping\JoinColumn|Mapping\InverseJoinColumn $joinColumn
      *
      * @return mixed[]
-     * @psalm-return array{
+     * @phpstan-return array{
      *                   name: string|null,
      *                   unique: bool,
      *                   nullable: bool,
@@ -716,7 +716,7 @@ class AttributeDriver extends CompatibilityAnnotationDriver
      * Parse the given Column as array
      *
      * @return mixed[]
-     * @psalm-return array{
+     * @phpstan-return array{
      *                   fieldName: string,
      *                   type: mixed,
      *                   scale: int,

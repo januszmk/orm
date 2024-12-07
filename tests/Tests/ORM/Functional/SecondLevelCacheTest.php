@@ -341,7 +341,7 @@ class ListenerSecondLevelCacheTest
     /** @var array<string, callable> */
     public $callbacks;
 
-    /** @psalm-param array<string, callable> $callbacks */
+    /** @phpstan-param array<string, callable> $callbacks */
     public function __construct(array $callbacks = [])
     {
         $this->callbacks = $callbacks;

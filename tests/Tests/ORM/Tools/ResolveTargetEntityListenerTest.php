@@ -134,7 +134,7 @@ class ResolveTargetEntity implements ResolveTarget
     private $id;
 
     /**
-     * @psalm-var Collection<int, Target>
+     * @phpstan-var Collection<int, Target>
      * @ManyToMany(targetEntity="Doctrine\Tests\ORM\Tools\Target")
      */
     private $manyToMany;
@@ -146,7 +146,7 @@ class ResolveTargetEntity implements ResolveTarget
     private $manyToOne;
 
     /**
-     * @psalm-var Collection<int, ResolveTarget>
+     * @phpstan-var Collection<int, ResolveTarget>
      * @OneToMany(targetEntity="Doctrine\Tests\ORM\Tools\ResolveTarget", mappedBy="manyToOne")
      */
     private $oneToMany;

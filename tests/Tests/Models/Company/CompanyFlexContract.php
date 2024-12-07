@@ -78,7 +78,7 @@ class CompanyFlexContract extends CompanyContract
     private $pricePerHour = 0;
 
     /**
-     * @psalm-var Collection<int, CompanyManager>
+     * @phpstan-var Collection<int, CompanyManager>
      * @ManyToMany(targetEntity="CompanyManager", inversedBy="managedContracts", fetch="EXTRA_LAZY")
      * @JoinTable(name="company_contract_managers",
      *    joinColumns={@JoinColumn(name="contract_id", referencedColumnName="id", onDelete="CASCADE")},
@@ -112,7 +112,7 @@ class CompanyFlexContract extends CompanyContract
         $this->pricePerHour = $pricePerHour;
     }
 
-    /** @psalm-return Collection<int, CompanyManager> */
+    /** @phpstan-return Collection<int, CompanyManager> */
     public function getManagers(): Collection
     {
         return $this->managers;

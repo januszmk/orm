@@ -33,13 +33,13 @@ class Driver
     private $name;
 
     /**
-     * @psalm-var Collection<int, Ride>
+     * @phpstan-var Collection<int, Ride>
      * @OneToMany(targetEntity="Ride", mappedBy="driver")
      */
     private $freeDriverRides;
 
     /**
-     * @psalm-var Collection<int, PaidRide>
+     * @phpstan-var Collection<int, PaidRide>
      * @OneToMany(targetEntity="PaidRide", mappedBy="driver")
      */
     private $driverRides;

@@ -29,7 +29,7 @@ class DDC964Group
     private $name;
 
     /**
-     * @psalm-var ArrayCollection<int, DDC964User>
+     * @phpstan-var ArrayCollection<int, DDC964User>
      * @ManyToMany(targetEntity="DDC964User", mappedBy="groups")
      */
     private $users;
@@ -55,7 +55,7 @@ class DDC964Group
         $this->users[] = $user;
     }
 
-    /** @psalm-return ArrayCollection<int, DDC964User> */
+    /** @phpstan-return ArrayCollection<int, DDC964User> */
     public function getUsers(): ArrayCollection
     {
         return $this->users;

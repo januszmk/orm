@@ -128,7 +128,7 @@ class GH5762Driver
     public $name;
 
     /**
-     * @psalm-var Collection<int, GH5762DriverRide>
+     * @phpstan-var Collection<int, GH5762DriverRide>
      * @OneToMany(targetEntity="GH5762DriverRide", mappedBy="driver")
      */
     public $driverRides;
@@ -194,7 +194,7 @@ class GH5762Car
     public $model;
 
     /**
-     * @psalm-var Collection<int, GH5762DriverRide>
+     * @phpstan-var Collection<int, GH5762DriverRide>
      * @OneToMany(targetEntity="GH5762DriverRide", mappedBy="car")
      */
     public $carRides;

@@ -67,7 +67,7 @@ class DDC735Product
     protected $id;
 
     /**
-     * @psalm-var Collection<int, DDC735Review>
+     * @phpstan-var Collection<int, DDC735Review>
      * @OneToMany(
      *   targetEntity="DDC735Review",
      *   mappedBy="product",
@@ -82,7 +82,7 @@ class DDC735Product
         $this->reviews = new ArrayCollection();
     }
 
-    /** @psalm-return Collection<int, DDC735Review> */
+    /** @phpstan-return Collection<int, DDC735Review> */
     public function getReviews(): Collection
     {
         return $this->reviews;
