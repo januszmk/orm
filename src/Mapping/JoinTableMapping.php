@@ -28,7 +28,7 @@ final class JoinTableMapping
 
     /**
      * @param mixed[] $mappingArray
-     * @psalm-param array{
+     * @phpstan-param array{
      *    name: string,
      *    quoted?: bool|null,
      *    joinColumns?: mixed[],

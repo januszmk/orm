@@ -31,7 +31,7 @@ final class DiscriminatorColumnMapping
     }
 
     /**
-     * @psalm-param array{
+     * @phpstan-param array{
      *     type: string,
      *     fieldName: string,
      *     name: string,

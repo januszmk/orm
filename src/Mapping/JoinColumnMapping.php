@@ -26,7 +26,7 @@ final class JoinColumnMapping
 
     /**
      * @param array<string, mixed> $mappingArray
-     * @psalm-param array{
+     * @phpstan-param array{
      *     name: string,
      *     referencedColumnName: string,
      *     unique?: bool|null,

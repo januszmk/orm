@@ -113,7 +113,7 @@ class Query extends AbstractQuery
     /**
      * The current state of this query.
      *
-     * @psalm-var self::STATE_*
+     * @phpstan-var self::STATE_*
      */
     private int $state = self::STATE_DIRTY;
 
@@ -343,7 +343,7 @@ class Query extends AbstractQuery
      * @param array<list<int>> $paramMappings
      *
      * @return mixed[][]
-     * @psalm-return array{0: list<mixed>, 1: array}
+     * @phpstan-return array{0: list<mixed>, 1: array}
      *
      * @throws Query\QueryException
      */
@@ -394,7 +394,7 @@ class Query extends AbstractQuery
 
     /**
      * @return mixed[] tuple of (value, type)
-     * @psalm-return array{0: mixed, 1: mixed}
+     * @phpstan-return array{0: mixed, 1: mixed}
      */
     private function resolveParameterValue(Parameter $parameter): array
     {
@@ -527,7 +527,7 @@ class Query extends AbstractQuery
      * @see AbstractQuery::STATE_DIRTY
      *
      * @return int The query state.
-     * @psalm-return self::STATE_* The query state.
+     * @phpstan-return self::STATE_* The query state.
      */
     public function getState(): int
     {

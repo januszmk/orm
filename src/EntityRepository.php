@@ -77,7 +77,7 @@ class EntityRepository implements ObjectRepository, Selectable
      *                                should be used during the search.
      *
      * @return object|null The entity instance or NULL if the entity can not be found.
-     * @psalm-return ?T
+     * @phpstan-return ?T
      */
     public function find(mixed $id, LockMode|null $lockMode = null, int|null $lockVersion = null): object|null
     {
@@ -87,7 +87,7 @@ class EntityRepository implements ObjectRepository, Selectable
     /**
      * Finds all entities in the repository.
      *
-     * @psalm-return list<T> The entities.
+     * @phpstan-return list<T> The entities.
      */
     public function findAll(): array
     {
@@ -99,7 +99,7 @@ class EntityRepository implements ObjectRepository, Selectable
      *
      * {@inheritDoc}
      *
-     * @psalm-return list<T>
+     * @phpstan-return list<T>
      */
     public function findBy(array $criteria, array|null $orderBy = null, int|null $limit = null, int|null $offset = null): array
     {
@@ -111,10 +111,10 @@ class EntityRepository implements ObjectRepository, Selectable
     /**
      * Finds a single entity by a set of criteria.
      *
-     * @psalm-param array<string, mixed> $criteria
-     * @psalm-param array<string, string>|null $orderBy
+     * @phpstan-param array<string, mixed> $criteria
+     * @phpstan-param array<string, string>|null $orderBy
      *
-     * @psalm-return T|null
+     * @phpstan-return T|null
      */
     public function findOneBy(array $criteria, array|null $orderBy = null): object|null
     {
@@ -126,10 +126,10 @@ class EntityRepository implements ObjectRepository, Selectable
     /**
      * Counts entities by a set of criteria.
      *
-     * @psalm-param array<string, mixed> $criteria
+     * @phpstan-param array<string, mixed> $criteria
      *
      * @return int The cardinality of the objects that match the given criteria.
-     * @psalm-return 0|positive-int
+     * @phpstan-return 0|positive-int
      *
      * @todo Add this method to `ObjectRepository` interface in the next major release
      */
@@ -142,7 +142,7 @@ class EntityRepository implements ObjectRepository, Selectable
      * Adds support for magic method calls.
      *
      * @param mixed[] $arguments
-     * @psalm-param list<mixed> $arguments
+     * @phpstan-param list<mixed> $arguments
      *
      * @throws BadMethodCallException If the method called is invalid.
      */
@@ -183,7 +183,7 @@ class EntityRepository implements ObjectRepository, Selectable
         return $this->em;
     }
 
-    /** @psalm-return ClassMetadata<T> */
+    /** @phpstan-return ClassMetadata<T> */
     protected function getClassMetadata(): ClassMetadata
     {
         return $this->class;
@@ -193,7 +193,7 @@ class EntityRepository implements ObjectRepository, Selectable
      * Select all elements from a selectable that match the expression and
      * return a new collection containing these elements.
      *
-     * @psalm-return AbstractLazyCollection<int, T>&Selectable<int, T>
+     * @phpstan-return AbstractLazyCollection<int, T>&Selectable<int, T>
      */
     public function matching(Criteria $criteria): AbstractLazyCollection&Selectable
     {
@@ -207,7 +207,7 @@ class EntityRepository implements ObjectRepository, Selectable
      *
      * @param string $method The method to call
      * @param string $by     The property name used as condition
-     * @psalm-param list<mixed> $arguments The arguments to pass at method call
+     * @phpstan-param list<mixed> $arguments The arguments to pass at method call
      *
      * @throws InvalidMagicMethodCall If the method called is invalid or the
      *                                requested field/association does not exist.
