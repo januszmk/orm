@@ -1,5 +1,11 @@
 # Upgrade to 4.0
 
+## Require implementation of `OutputWalker`, remove `SqlWalker::getExecutor()`
+
+The `SqlWalker::getExecutor()` method is removed. Output walkers should
+implement the `\Doctrine\ORM\Query\OutputWalker` interface and create
+`Doctrine\ORM\Query\Exec\SqlFinalizer` instances.
+
 ## Remove `DatabaseDriver`
 
 The class `Doctrine\ORM\Mapping\Driver\DatabaseDriver` is removed.

@@ -878,9 +878,6 @@
     <ArgumentTypeCoercion>
       <code><![CDATA[$stringPattern]]></code>
     </ArgumentTypeCoercion>
-    <DeprecatedMethod>
-      <code><![CDATA[setSqlExecutor]]></code>
-    </DeprecatedMethod>
     <InvalidNullableReturnType>
       <code><![CDATA[AST\SelectStatement|AST\UpdateStatement|AST\DeleteStatement]]></code>
     </InvalidNullableReturnType>
