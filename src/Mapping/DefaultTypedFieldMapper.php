@@ -19,7 +19,7 @@ use function assert;
 use function enum_exists;
 use function is_a;
 
-/** @psalm-type ScalarName = 'array'|'bool'|'float'|'int'|'string' */
+/** @phpstan-type ScalarName = 'array'|'bool'|'float'|'int'|'string' */
 final class DefaultTypedFieldMapper implements TypedFieldMapper
 {
     /** @var array<class-string|ScalarName, class-string<Type>|string> $typedFieldMappings */
@@ -70,8 +70,6 @@ final class DefaultTypedFieldMapper implements TypedFieldMapper
             assert(is_a($type->getName(), BackedEnum::class, true));
             $mapping['enumType'] = $type->getName();
             $type                = $reflection->getBackingType();
-
-            assert($type instanceof ReflectionNamedType);
         }
 
         if (isset($mapping['type'])) {

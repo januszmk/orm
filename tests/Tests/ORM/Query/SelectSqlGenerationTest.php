@@ -2119,7 +2119,7 @@ SQL,
         );
     }
 
-    /** @psalm-return list<array{string}> */
+    /** @phpstan-return list<array{string}> */
     public static function mathematicOperatorsProvider(): array
     {
         return [['+'], ['-'], ['*'], ['/']];

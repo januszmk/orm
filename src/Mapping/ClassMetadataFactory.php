@@ -605,7 +605,7 @@ class ClassMetadataFactory extends AbstractClassMetadataFactory
         }
     }
 
-    /** @psalm-return ClassMetadata::GENERATOR_TYPE_* */
+    /** @phpstan-return ClassMetadata::GENERATOR_TYPE_* */
     private function determineIdGeneratorStrategy(AbstractPlatform $platform): int
     {
         assert($this->em !== null);

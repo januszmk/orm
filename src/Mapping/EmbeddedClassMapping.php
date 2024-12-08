@@ -43,7 +43,7 @@ final class EmbeddedClassMapping
     }
 
     /**
-     * @psalm-param array{
+     * @phpstan-param array{
      *     class: class-string,
      *     columnPrefix?: false|string|null,
      *     declaredField?: string|null,

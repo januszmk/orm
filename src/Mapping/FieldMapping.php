@@ -22,7 +22,7 @@ final class FieldMapping
     public bool|null $notInsertable      = null;
     public bool|null $notUpdatable       = null;
     public string|null $columnDefinition = null;
-    /** @psalm-var ClassMetadata::GENERATED_*|null */
+    /** @phpstan-var ClassMetadata::GENERATED_*|null */
     public int|null $generated = null;
     /** @var class-string<BackedEnum>|null */
     public string|null $enumType = null;
@@ -81,7 +81,7 @@ final class FieldMapping
 
     /**
      * @param array<string, mixed> $mappingArray
-     * @psalm-param array{
+     * @phpstan-param array{
      *     type: string,
      *     fieldName: string,
      *     columnName: string,
