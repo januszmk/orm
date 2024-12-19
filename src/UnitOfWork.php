@@ -2968,7 +2968,7 @@ EXCEPTION
             $oid    = spl_object_id($entity);
             $this->registerManaged($entity, $id, $data);
 
-            if (isset($hints[Query::HINT_READ_ONLY])) {
+            if (isset($hints[Query::HINT_READ_ONLY]) && $hints[Query::HINT_READ_ONLY] === true) {
                 $this->readOnlyObjects[$oid] = true;
             }
         }
